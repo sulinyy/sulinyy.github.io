@@ -1,0 +1,1964 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="linux的正确打开姿势, 哦">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>linux的正确打开姿势 | 哦</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">哦</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">哦</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">linux的正确打开姿势</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/linux/">
+                                <span class="chip bg-color">linux</span>
+                            </a>
+                        
+                            <a href="/tags/shell/">
+                                <span class="chip bg-color">shell</span>
+                            </a>
+                        
+                            <a href="/tags/firewall/">
+                                <span class="chip bg-color">firewall</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%98%B2%E7%81%AB%E5%A2%99/">
+                                <span class="chip bg-color">防火墙</span>
+                            </a>
+                        
+                            <a href="/tags/iptable/">
+                                <span class="chip bg-color">iptable</span>
+                            </a>
+                        
+                            <a href="/tags/profile/">
+                                <span class="chip bg-color">profile</span>
+                            </a>
+                        
+                            <a href="/tags/wget/">
+                                <span class="chip bg-color">wget</span>
+                            </a>
+                        
+                            <a href="/tags/curl/">
+                                <span class="chip bg-color">curl</span>
+                            </a>
+                        
+                            <a href="/tags/yum/">
+                                <span class="chip bg-color">yum</span>
+                            </a>
+                        
+                            <a href="/tags/rpm/">
+                                <span class="chip bg-color">rpm</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%AE%A1%E9%81%93/">
+                                <span class="chip bg-color">管道</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%87%8D%E5%AE%9A%E5%90%91/">
+                                <span class="chip bg-color">重定向</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/linux/" class="post-category">
+                                linux
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-10-16
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="内核与发行版"><a href="#内核与发行版" class="headerlink" title="内核与发行版"></a>内核与发行版</h1><h2 id="内核"><a href="#内核" class="headerlink" title="内核"></a>内核</h2><ul>
+<li>系统核心，一般包括5大部分<ul>
+<li>进程管理</li>
+<li>存储管理</li>
+<li>文件管理</li>
+<li>设备管理</li>
+<li>网络管理</li>
+</ul>
+</li>
+</ul>
+<h2 id="发行版"><a href="#发行版" class="headerlink" title="发行版"></a>发行版</h2><ul>
+<li><p>以内核为中心，集成各种系统管理软件应用工具组成的一套操作系统，称为Linux发行版</p>
+<ul>
+<li>CentOS（本文主要以CentOS为例进行说明)<ul>
+<li>RedHat的社区版</li>
+<li>稳定</li>
+</ul>
+</li>
+<li>Ubuntu<ul>
+<li>安装简单</li>
+<li>界面华丽</li>
+<li>驱动支持</li>
+<li>社区活跃</li>
+<li>更新频繁</li>
+<li>基于Debian</li>
+</ul>
+</li>
+<li>Debian<ul>
+<li>软件包通常是稳定的，而不是最新的</li>
+<li>社区维护</li>
+<li>apt软件包管理</li>
+<li>默认不包含任何专业驱动</li>
+</ul>
+</li>
+<li>Oracle Linux<ul>
+<li>专门为Oracle数据库进行优化，性能提高迅猛</li>
+<li>基于RedHat</li>
+</ul>
+</li>
+<li>openSUSE<ul>
+<li>没用过</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>各发行版间的包管理器</p>
+<ul>
+<li>Debian<ul>
+<li>apt</li>
+</ul>
+</li>
+<li>CentOS<ul>
+<li>yum</li>
+</ul>
+</li>
+<li>openSUSE<ul>
+<li>YaST</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="终端快捷键"><a href="#终端快捷键" class="headerlink" title="终端快捷键"></a>终端快捷键</h2><ul>
+<li>移动至行首行尾 <code>ctrl+a, ctrl+e</code></li>
+<li>中断与退出终端<code>ctrl+c, ctrl+d</code></li>
+<li>后台运行，如果忘了输入<code>&amp;</code>可以使用<code>ctrl+z</code></li>
+<li>清空<code>ctrl+c</code></li>
+<li>丢弃命令，丢弃光标前后的命令 <code>ctrl+u,ctrl+k</code></li>
+<li>丢弃光标前的单词 <code>ctrl+w</code></li>
+<li>丢弃的内容需要复制 <code>ctrl+y</code></li>
+<li>显示上/下一条命令<code>ctrl+p, ctrl+n</code></li>
+<li>搜索历史命令<code>ctrl+r</code></li>
+</ul>
+<h2 id="sh解释器"><a href="#sh解释器" class="headerlink" title="sh解释器"></a>sh解释器</h2><ul>
+<li>查看系统支持哪些shell</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token punctuation">[</span>sulin@localhost ~<span class="token punctuation">]</span>$ <span class="token function">cat</span> /etc/shells
+/bin/sh
+/bin/bash
+/usr/bin/sh
+/usr/bin/bash
+/bin/tcsh
+/bin/csh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><code>/bin/sh</code><ul>
+<li>当某行代码出错时，不继续往下解释</li>
+<li>相当于<code>/bin/bash --posix</code></li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token punctuation">[</span>sulin@localhost ~<span class="token punctuation">]</span>$ <span class="token function">ls</span> -l /bin/sh
+lrwxrwxrwx. 1 root root 4 10月 11 2019 /bin/sh -<span class="token operator">></span> <span class="token function">bash</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ul>
+<li><p><code>/bin/bash</code></p>
+</li>
+<li><p>放在脚本中第一行指定文件类型</p>
+<ul>
+<li><code>#!</code>占用2个字节的魔法</li>
+<li><code>#!/bin/sh</code></li>
+<li><code>#!/bin/bash</code></li>
+</ul>
+</li>
+<li><p>用户的默认Shell设置</p>
+<ul>
+<li>在文件<code>/etc/passwd</code>中设置</li>
+</ul>
+</li>
+</ul>
+<h2 id="启动停止命令"><a href="#启动停止命令" class="headerlink" title="启动停止命令"></a>启动停止命令</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#启动到命令行界面</span>
+systemctl set-default multi-user.target
+<span class="token comment" spellcheck="true">#启动到图形界面</span>
+systemctl set-default graphical.target
+<span class="token comment" spellcheck="true">#重启</span>
+<span class="token function">shutdown</span> -r now
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="用户管理命令"><a href="#用户管理命令" class="headerlink" title="用户管理命令"></a>用户管理命令</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#添加用户</span>
+<span class="token function">useradd</span>
+<span class="token comment" spellcheck="true">#删除用户</span>
+<span class="token function">userdel</span>
+<span class="token comment" spellcheck="true">#修改用户</span>
+<span class="token function">usermod</span>
+<span class="token comment" spellcheck="true">#修改密码</span>
+<span class="token function">passwd</span>
+
+<span class="token comment" spellcheck="true">#改变文件或目录的权限</span>
+<span class="token function">chmod</span>
+<span class="token comment" spellcheck="true">#改变所有者</span>
+<span class="token function">chown</span>
+<span class="token comment" spellcheck="true">#改变所属组</span>
+<span class="token function">chgrp</span>
+
+<span class="token comment" spellcheck="true">#添加组</span>
+<span class="token function">groupadd</span>
+<span class="token comment" spellcheck="true">#修改组</span>
+<span class="token function">groupmod</span>
+<span class="token comment" spellcheck="true">#删除组</span>
+<span class="token function">groupdel</span>
+<span class="token comment" spellcheck="true">#给组加密码</span>
+gpasswd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><ul>
+<li>命令</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token keyword">echo</span>
+<span class="token function">env</span>
+<span class="token keyword">set</span>
+<span class="token function">export</span>
+unset<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>常用变量</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash">HOME
+LOGNAME
+MAIL
+PATH
+HOSTNAME
+PS1
+PWD
+SHELL
+TERM
+LANG<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>环境变量文件<ul>
+<li><code>/etc/profile</code><ul>
+<li>用户登录或su -命令切换时执行，Login shell执行，Non-login shell不执行</li>
+<li>全局变量</li>
+<li>循环执行<code>/etc/profile.d</code>中的脚本，<code>profile.d</code>目录下的脚本文件包括各应用的初始配置</li>
+</ul>
+</li>
+<li><code>/etc/bashrc</code><ul>
+<li>执行完/etc/profile后运行bash shell就会执行</li>
+<li>每执行一次bash shell执行一次</li>
+</ul>
+</li>
+<li><code>~/.bash_profile</code><ul>
+<li><code>/etc/profile</code>的用户级别设置</li>
+<li>Login shell执行，Non-login shell不执行</li>
+<li>默认情况会执行用户的<code>~/.bashrc</code></li>
+</ul>
+</li>
+<li><code>~/.bashrc</code><ul>
+<li>用户级别设置，打开新shell时执行</li>
+</ul>
+</li>
+<li><code>~/.bash_logout</code><ul>
+<li>退出shell时执行</li>
+<li>删除临时文件等</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="yum"><a href="#yum" class="headerlink" title="yum"></a>yum</h2><h3 id="更新yum源"><a href="#更新yum源" class="headerlink" title="更新yum源"></a>更新yum源</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/centos">ali源</a></li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">cd</span> /etc/yum.repos.d/
+<span class="token function">mv</span> CentOS-Base.repo CentOS-Base.repo.backup
+<span class="token function">wget</span> -O /etc/yum.repos.d/CentOS-Base.repo https://mirrors.aliyun.com/repo/Centos-8.repo
+yum clean all
+yum makecache<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="补充一波wget"><a href="#补充一波wget" class="headerlink" title="补充一波wget"></a>补充一波wget</h3><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#爬个虫</span>
+<span class="token function">wget</span> -r -p -nc -np -k -c --progress<span class="token operator">=</span>bar http://www.dcdapp.com
+
+<span class="token comment" spellcheck="true">#帮助文档</span>
+<span class="token function">wget</span> --help<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>部分参数说明<ul>
+<li><code>-r</code> –recursive指定递归下载</li>
+<li><code>-p</code> –page-requisites下载所有用于显示 HTML 页面的图片之类的元素。</li>
+<li><code>-nc</code> –no-clobber skip downloads that would download to existing files (overwriting them).</li>
+<li><code>-np</code>–no-parent 不追溯至父目录。</li>
+<li><code>-k</code>–convert-links 让下载得到的 HTML 或 CSS 中的链接指向本地文件。</li>
+<li><code>-c</code> –continue 断点续传下载文件。–progress=TYPE 选择进度条类型。</li>
+<li><code>-b</code> –background 启动后转入后台。</li>
+<li><code>-O</code> –output-document=FILE  将文档写入 FILE。</li>
+<li><code>-P</code> –directory-prefix=PREFIX 以 PREFIX/… 保存文件</li>
+<li><code>-t</code> –tries=NUMBER      设置重试次数为 NUMBER (0 代表无限制)。</li>
+</ul>
+</li>
+</ul>
+<h3 id="介绍了wget，怎能不介绍curl"><a href="#介绍了wget，怎能不介绍curl" class="headerlink" title="介绍了wget，怎能不介绍curl"></a>介绍了wget，怎能不介绍curl</h3><ul>
+<li><p>常用参数</p>
+<ul>
+<li><p><code>-o</code>指定文件名</p>
+<pre class="line-numbers language-bash"><code class="language-bash">curl -o <span class="token comment" spellcheck="true">#1_#2.tar.gz http://www.xxxx.com/{a1,a2}/xo[1-5].tar.gz</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p><code>-O</code>–remote-name   Write output to a file named as the remote file</p>
+<pre class="line-numbers language-bash"><code class="language-bash">curl -O http://www.xxxx.com/<span class="token punctuation">{</span>a1,a2<span class="token punctuation">}</span>/xo<span class="token punctuation">[</span>1-5<span class="token punctuation">]</span>.tar.gz
+
+<span class="token comment" spellcheck="true">#补充一个grep的转义，字符-需要使用\进行转义，并且查询内容要用单引号框起来才能查询出结果，如下所示：</span>
+curl --help<span class="token operator">|</span><span class="token function">grep</span> <span class="token string">'\-O'</span>
+-O, --remote-name   Write output to a <span class="token function">file</span> named as the remote <span class="token function">file</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><code>-r</code> 分块下载，–range RANGE  Retrieve only the bytes within a range</p>
+<pre class="line-numbers language-bash"><code class="language-bash">curl -r 0-10000 -o file_part1.tar.gz http://www.xxx.com/xxx.tar.gz
+curl -r 10000-20000 -o file_part2.tar.gz http://www.xxx.com/xxx.tar.gz
+curl -r 20000- -o file_part3.tar.gz http://www.xxx.com/xxx.tar.gz
+<span class="token function">cat</span> file_part* <span class="token operator">></span> file.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><code>-T</code>–upload-file FILE Transfer FILE to destination</p>
+</li>
+<li><p><code>-F</code> –form &lt;name=content&gt; 模拟http表单提交数据</p>
+</li>
+<li><p><code>-c</code>–cookie-jar-file 操作结束后把cookie写入到这个文件中</p>
+</li>
+<li><p><code>-D</code> 保存头信息</p>
+<pre class="line-numbers language-bash"><code class="language-bash">curl -c ./ck_c.txt -D ./ck_d.txt -F name<span class="token operator">=</span>xxx -F pass<span class="token operator">=</span>yyy http://www.xoxo.com/login
+curl -T pic<span class="token operator">=</span>@localfile http://www.xoxo.com/upload<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><code>-A</code>随意指定当前浏览器信息</p>
+</li>
+<li><p><code>-b</code>使用cookie文件</p>
+</li>
+<li><p><code>-C</code>断点续传</p>
+</li>
+<li><p><code>-d</code>使用POST</p>
+<pre class="line-numbers language-bash"><code class="language-bash">curl -d <span class="token string">"name=xxx&amp;pass=yyy"</span> http://www.xoxo.com/login<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p><code>-v</code> verbose，打印更多信息</p>
+</li>
+<li><p><code>-m</code> –max-time <seconds> 指定处理的最大时长</seconds></p>
+</li>
+</ul>
+<ul>
+<li><p><code>-H</code>指定请求头</p>
+</li>
+<li><p><code>-H</code>–header </p><header> 指定请求头参数<p></p>
+</header></li>
+<li><p><code>-s</code>–slient 减少输出的信息</p>
+</li>
+<li><p><code>--connect-timeout</code>指定尝试连接的最大时长</p>
+</li>
+<li><p><code>-x/--proxy</code>指定代理服务器地址和端口，端口默认为1080</p>
+</li>
+<li><p><code>--retry</code>  指定重试次数</p>
+</li>
+<li><p><code>-e/--referer</code> 指定引用地址</p>
+</li>
+<li><p><code>-I/--head</code> 仅返回头部信息，使用HEAD请求</p>
+</li>
+<li><p><code>-u/--user</code>设置服务器的用户和密码</p>
+</li>
+</ul>
+<h3 id="介绍分段下载时，下载了文件file-tar-gz，下面介绍打包和压缩"><a href="#介绍分段下载时，下载了文件file-tar-gz，下面介绍打包和压缩" class="headerlink" title="介绍分段下载时，下载了文件file.tar.gz，下面介绍打包和压缩"></a>介绍分段下载时，下载了文件file.tar.gz，下面介绍打包和压缩</h3><ul>
+<li><p>命令如下</p>
+<table>
+<thead>
+<tr>
+<th>文件格式</th>
+<th>解压命令</th>
+<th>压缩命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>*.tar</td>
+<td>tar -xvf</td>
+<td>tar -cvf</td>
+</tr>
+<tr>
+<td>*.gz</td>
+<td>gzip -d 或 gunzip</td>
+<td>gzip xoxo</td>
+</tr>
+<tr>
+<td>*.tar.gz *.tgz</td>
+<td>tar -xzf</td>
+<td>tar -zcvf</td>
+</tr>
+<tr>
+<td>*.zip</td>
+<td>unzip</td>
+<td></td>
+</tr>
+<tr>
+<td>*.rar</td>
+<td>unrar e</td>
+<td></td>
+</tr>
+<tr>
+<td>*.tar.Z</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>*.Z</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>*.tar.bz2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>*.bz2s</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="打包完成后，不知道文件放哪里了，需要使用find命令"><a href="#打包完成后，不知道文件放哪里了，需要使用find命令" class="headerlink" title="打包完成后，不知道文件放哪里了，需要使用find命令"></a>打包完成后，不知道文件放哪里了，需要使用find命令</h2><ul>
+<li><p>常用参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th><strong>描述</strong></th>
+<th><strong>参数名</strong></th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>-newer</strong></td>
+<td>文件最近一次修改比 file 修改时间要晚</td>
+<td><strong>-perm</strong></td>
+<td>按执行权限来查找</td>
+</tr>
+<tr>
+<td><strong>-anewer</strong></td>
+<td>文件最近一次访问比 file 修改时间要晚</td>
+<td><strong>-type</strong></td>
+<td>按照文件类型来查找</td>
+</tr>
+<tr>
+<td><strong>-cnewer</strong></td>
+<td>文件状态最近一次修改比 file 修改时间要晚</td>
+<td><strong>-size</strong></td>
+<td>按照文件的大小来进行查找</td>
+</tr>
+<tr>
+<td><strong>-amin</strong></td>
+<td>文件最近一次访问是在 n 分钟之前</td>
+<td><strong>-user</strong></td>
+<td>按文件所属用户来查找</td>
+</tr>
+<tr>
+<td><strong>-atime</strong></td>
+<td>文件最近一次访问是在 n*24 小时之前</td>
+<td><strong>-group</strong></td>
+<td>按文件所属用户组来查找</td>
+</tr>
+<tr>
+<td><strong>-cmin</strong></td>
+<td>文件状态最近一次修改是在 n 分钟之前</td>
+<td><strong>-nouser</strong></td>
+<td>无有效所属用户的文件</td>
+</tr>
+<tr>
+<td><strong>-ctime</strong></td>
+<td>文件状态最近一次修改是在 n*24 小时之前</td>
+<td><strong>-nogroup</strong></td>
+<td>无有效所属用户组的文件</td>
+</tr>
+<tr>
+<td><strong>-mmin</strong></td>
+<td>文件内容最近一次修改是在 n 分钟之前</td>
+<td><strong>-empty</strong></td>
+<td>空的普通文件或者空目录</td>
+</tr>
+<tr>
+<td><strong>-mtime</strong></td>
+<td>文件内容最近一次修改是在 n*24 小时之前</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+<li><p><code>-exec -ok</code> 参数</p>
+<ul>
+<li>查找出来并执行命令</li>
+</ul>
+</li>
+<li><p>示例</p>
+<pre class="line-numbers language-hash"><code class="language-hash">[sulin@localhost tmp]$ echo "1" > 1.txt
+[sulin@localhost tmp]$ echo "2" > 2.txt
+[sulin@localhost tmp]$ echo "3" > 3.txt
+[sulin@localhost tmp]$ echo "4" > 4.txt
+[sulin@localhost tmp]$ echo "10" > 10.txt
+#查找文件
+[sulin@localhost tmp]$ find -name "1*.txt"
+./1.txt
+./10.txt
+#查找文件并执行ls -la命令
+[sulin@localhost tmp]$ find -name "1*.txt" -exec ls -la {} \;
+-rw-rw-r--. 1 sulin sulin 2 10月 17 00:44 ./1.txt
+-rw-rw-r--. 1 sulin sulin 3 10月 17 00:45 ./10.txt
+#查找文件并执行rm操作
+[sulin@localhost tmp]$ find -name "1*.txt" -exec rm {} \;
+[sulin@localhost tmp]$ ls
+2.txt  3.txt  4.txt
+#查找文件并执行rm操作，并提示确认
+[sulin@localhost tmp]$ find -name "2*.txt" -ok rm {} \;
+< rm ... ./2.txt > ? y
+
+cd /etc
+find . -maxdepth 1 -cnewer yum.conf -a -not -cnewer purple -anewer ghostscript -a -type d -a -empty
+find -size +640
+find -size -640
+
+#查找文件大小小于1
+[sulin@localhost etc]$ find . -maxdepth 1 -size -1
+./crypttab
+./environment
+./exports
+./motd
+./.pwd.lock
+./subgid
+./subuid
+./cron.deny
+./wvdial.conf
+#文件大小大于100
+[sulin@localhost etc]$ find . -maxdepth 1 -size +100
+./services
+./ld.so.cache
+#文件大小小于1或者大于100的总行数
+[sulin@localhost etc]$ find . -maxdepth 1 -size -1 -o -size +100|wc -l
+11<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h2 id="vi介绍"><a href="#vi介绍" class="headerlink" title="vi介绍"></a>vi介绍</h2><ul>
+<li><p>保存和退出：<code>:w</code>,<code>:wq</code>,<code>:x</code>,<code>:q</code>,<code>:q!</code></p>
+</li>
+<li><p>编辑：</p>
+<ul>
+<li>常用的：<code>i</code>,<code>a</code>,<code>x</code>,<code>r</code><ul>
+<li>大些<code>I</code>,<code>A</code>分别代码行首行末追加</li>
+</ul>
+</li>
+<li>较常用的增加空行：<code>o</code>,<code>O</code></li>
+<li>撤销与redu：<code>u</code>，<code>ctrl+r</code></li>
+<li>删除行：<code>dd</code></li>
+</ul>
+</li>
+<li><p>光标</p>
+<ul>
+<li><p>上下翻页</p>
+<ul>
+<li>翻一页<code>ctrl+f,ctrl+b</code>，forward &amp; back</li>
+<li>翻半页<code>ctrl+u,ctrl+d</code>，up &amp; down</li>
+</ul>
+</li>
+<li><p>移动</p>
+<ul>
+<li><code>ctrl+e</code></li>
+</ul>
+</li>
+<li><p>行首行尾</p>
+<ul>
+<li><code>^</code>,<code>$</code></li>
+</ul>
+</li>
+<li><p>文首文尾</p>
+<ul>
+<li><code>gg</code>,<code>G</code>,<code>:1</code>,<code>:$</code></li>
+</ul>
+</li>
+<li><p>跳到第n行</p>
+<ul>
+<li><code>ngg</code>，比如<code>5gg</code>跳转到第五行，或者<code>:5</code></li>
+<li><code>:set number</code> 显示行号</li>
+</ul>
+</li>
+<li><p>上下左右</p>
+<ul>
+<li><code>h j k l</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>复制粘贴</p>
+<ul>
+<li><p>复制</p>
+<ul>
+<li><code>yy</code>,<code>nyy</code> 复制一行或n行</li>
+</ul>
+</li>
+<li><p>粘贴</p>
+<ul>
+<li><code>p</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>匹配</p>
+<ul>
+<li><p>向后搜索 <code>/pattern</code></p>
+</li>
+<li><p>向前搜索<code>?pattern</code></p>
+</li>
+<li><p>搜索整个文件，替换 <code>:%s/old/new/g</code></p>
+</li>
+<li><p>搜索整个文件，替换需要确认 <code>:%s/old/new/g</code></p>
+</li>
+<li><p>下一个/上一个匹配 <code>n</code>,<code>N</code> </p>
+</li>
+</ul>
+</li>
+<li><p>查看命令执行结果</p>
+<ul>
+<li><code>:!pwd</code></li>
+</ul>
+</li>
+<li><p>保存的时候没有权限</p>
+<p><code>:w !sudo tee %</code></p>
+</li>
+</ul>
+<h2 id="rmp包管理"><a href="#rmp包管理" class="headerlink" title="rmp包管理"></a>rmp包管理</h2><ul>
+<li><p>示例</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#安装</span>
+rpm -ivh xxx.rpm
+<span class="token comment" spellcheck="true">#更新</span>
+rpm -Uvh xxx.rpm
+<span class="token comment" spellcheck="true">#删除</span>
+rmp -e xxx.rmp
+<span class="token comment" spellcheck="true">#查询</span>
+rmp -qa
+<span class="token comment" spellcheck="true">#查询xxx</span>
+rmp -qa<span class="token operator">|</span> <span class="token function">grep</span> -i xxx<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>参数说明</p>
+<ul>
+<li><code>-i</code> 安装 install</li>
+<li><code>-v</code> 显示执行过程</li>
+<li><code>-h</code> 显示进度</li>
+<li><code>-e</code> 删除</li>
+<li><code>-q</code> 询问模式</li>
+<li><code>-a</code> 查询所有软件包</li>
+<li><code>-U</code> 升级</li>
+</ul>
+</li>
+</ul>
+<h2 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h2><ul>
+<li><p>rpm查询指定软件包时使用了管道命令，现在介绍如何使用管道命令</p>
+</li>
+<li><p>用法：</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#将cmd1的输出作为cmd2的输入，cmd2的输出作为cmd3的输入</span>
+cmd1 <span class="token operator">|</span> cmd2 <span class="token operator">|</span> <span class="token punctuation">..</span>. <span class="token operator">|</span> cmdn<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>常在管道中使用的命令</p>
+<ul>
+<li><p><code>grep</code></p>
+</li>
+<li><p><code>sort</code> 默认以文本排序，如果要按数字排序，加上参数<code>-n</code></p>
+</li>
+<li><p><code>paste</code></p>
+</li>
+<li><p><code>wc</code></p>
+</li>
+<li><p><code>tee</code></p>
+</li>
+<li><p><code>xargs</code></p>
+</li>
+<li><p><code>expand</code></p>
+</li>
+<li><p><code>join</code></p>
+</li>
+<li><p><code>tr</code></p>
+</li>
+<li><p><code>col</code></p>
+</li>
+<li><p><code>cut</code></p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#按空格分割取第一列</span>
+last<span class="token operator">|</span><span class="token function">cut</span> -d <span class="token string">' '</span> -f 1
+<span class="token comment" spellcheck="true">#按:分割取第一和第六列</span>
+<span class="token function">cat</span> /etc/passwd<span class="token operator">|</span> <span class="token function">cut</span> -d <span class="token string">':'</span> -f 1,6
+<span class="token comment" spellcheck="true">#取第一到第六个字符</span>
+<span class="token function">cat</span> /etc/passwd<span class="token operator">|</span> <span class="token function">cut</span> -c 1-6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>示例</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#先通过grep --help查找出grep命令的帮助，然后匹配`-c`的结果，结果有9行</span>
+<span class="token punctuation">[</span>sulin@localhost java<span class="token punctuation">]</span>$ <span class="token function">grep</span> --help<span class="token operator">|</span><span class="token function">grep</span> -n <span class="token string">'\-c'</span>
+13:  -i, --ignore-case         忽略大小写
+25:  -m, --max-count<span class="token operator">=</span>NUM       NUM 次匹配后停止
+53:  -c, --count               print only a count of matching lines per FILE
+58:  -B, --before-context<span class="token operator">=</span>NUM  打印以文本起始的NUM 行
+59:  -A, --after-context<span class="token operator">=</span>NUM   打印以文本结尾的NUM 行
+60:  -C, --context<span class="token operator">=</span>NUM         打印输出文本NUM 行
+61:  -NUM                      same as --context<span class="token operator">=</span>NUM
+64:      --color<span class="token punctuation">[</span><span class="token operator">=</span>WHEN<span class="token punctuation">]</span>,
+65:      --colour<span class="token punctuation">[</span><span class="token operator">=</span>WHEN<span class="token punctuation">]</span>       use markers to highlight the matching strings<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">#查找匹配-c的行数，总共9行</span>
+<span class="token punctuation">[</span>sulin@localhost java<span class="token punctuation">]</span>$ <span class="token function">grep</span> --help<span class="token operator">|</span><span class="token function">grep</span> -c <span class="token string">'\-c'</span>
+9
+<span class="token comment" spellcheck="true">#查看profile文件的行数</span>
+<span class="token punctuation">[</span>sulin@localhost etc<span class="token punctuation">]</span>$ <span class="token function">cat</span> /etc/profile<span class="token operator">|</span><span class="token function">wc</span> -l
+82
+<span class="token comment" spellcheck="true">#查看passwd文件，按:分割第一段后排序，取出前2个结果</span>
+<span class="token punctuation">[</span>sulin@localhost etc<span class="token punctuation">]</span>$ <span class="token function">cat</span> /etc/passwd <span class="token operator">|</span><span class="token function">sort</span> -t <span class="token string">':'</span> -k 1<span class="token operator">|</span> <span class="token function">head</span> -n 2
+abrt:x:173:173::/etc/abrt:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+
+<span class="token comment" spellcheck="true">#查询登录历史，排序，去重，然后转换成大写</span>
+<span class="token punctuation">[</span>sulin@localhost ~<span class="token punctuation">]</span>$ last <span class="token operator">|</span><span class="token function">cut</span> -d <span class="token string">' '</span> -f 1<span class="token operator">|</span><span class="token function">sort</span><span class="token operator">|</span><span class="token function">uniq</span> -c<span class="token operator">|</span> <span class="token function">tr</span> a-z A-Z
+      1 
+     10 REBOOT
+     21 SULIN
+      1 WTMP
+
+<span class="token comment" spellcheck="true">#连接与合并</span>
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token keyword">echo</span> <span class="token string">'test1 1'</span><span class="token operator">></span>1.txt
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token function">cat</span> 1.txt 
+test1 1
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token function">rm</span> *
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token keyword">echo</span> <span class="token string">'test1 1'</span><span class="token operator">>></span>1.txt
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token keyword">echo</span> <span class="token string">'test2 1'</span><span class="token operator">>></span>1.txt
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token function">cat</span> 1.txt 
+test1 1
+test2 1
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token keyword">echo</span> <span class="token string">'test1 2'</span><span class="token operator">>></span>2.txt
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token keyword">echo</span> <span class="token string">'test2 2'</span><span class="token operator">>></span>2.txt
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token function">cat</span> 2.txt 
+test1 2
+test2 2
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token function">join</span> 1.txt 2.txt 
+test1 1 2
+test2 1 2
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token function">paste</span> 1.txt 2.txt 
+test1 1    test1 2
+test2 1    test2 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h2 id="源码编译和安装"><a href="#源码编译和安装" class="headerlink" title="源码编译和安装"></a>源码编译和安装</h2><ul>
+<li>Linux上的软件都经过GPL授权，因此几乎都有源码，源码需要进行编译生成二进制文件才能执行</li>
+<li>一般情况下步骤如下：<ul>
+<li>copy | wget源码</li>
+<li>查看INSTALL文件和README文件</li>
+<li>./configure</li>
+<li>make clean &amp; make</li>
+<li>make install</li>
+</ul>
+</li>
+</ul>
+<h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h2><ul>
+<li><p>概念</p>
+<ul>
+<li><p>标准输入 <code>stdin</code> 文件描述符<code>0</code></p>
+</li>
+<li><p>标准输出 <code>stdout</code> 文件描述符<code>1</code></p>
+</li>
+<li><p>错误输出 <code>stderr</code> 文件描述符 <code>2</code></p>
+</li>
+<li><p><code>0 1 2</code>是如何定义的</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token punctuation">[</span>sulin@localhost ~<span class="token punctuation">]</span>$ ll /dev/std*
+lrwxrwxrwx. 1 root root 15 10月 17 00:22 /dev/stderr -<span class="token operator">></span> /proc/self/fd/2
+lrwxrwxrwx. 1 root root 15 10月 17 00:22 /dev/stdin -<span class="token operator">></span> /proc/self/fd/0
+lrwxrwxrwx. 1 root root 15 10月 17 00:22 /dev/stdout -<span class="token operator">></span> /proc/self/fd/1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>示例</p>
+<ul>
+<li>输出重定向</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#标准输出重定向到文件，覆盖文件</span>
+<span class="token function">ls</span> -l <span class="token operator">></span> log.txt
+<span class="token comment" spellcheck="true">#追加到文件</span>
+<span class="token function">ls</span> -l <span class="token operator">>></span> log.txt
+<span class="token comment" spellcheck="true">#将错误输出重定向到文件，覆盖文件</span>
+commond 2 <span class="token operator">></span> err.txt
+<span class="token comment" spellcheck="true">#追加</span>
+commond 2 <span class="token operator">>></span> err.txt
+<span class="token comment" spellcheck="true">#输出追加到log，错误重定向到输出</span>
+commond <span class="token operator">>></span> log.txt 2<span class="token operator">></span><span class="token operator">&amp;</span>1
+<span class="token comment" spellcheck="true">#同上</span>
+commond <span class="token operator">&amp;</span> <span class="token operator">>></span> log.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>输入重定向</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#将文件作为命令的标准输入</span>
+commond <span class="token operator">&lt;</span> <span class="token function">file</span>
+<span class="token comment" spellcheck="true">#从标准输入读，直到分界符停止</span>
+commond <span class="token operator">&lt;&lt;</span> EOF
+<span class="token comment" spellcheck="true">#文件1作为标准输入，并重定向输出到文件2</span>
+commond <span class="token operator">&lt;</span> file1 <span class="token operator">></span> file2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><code>/dev/null</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="网络命令"><a href="#网络命令" class="headerlink" title="网络命令"></a>网络命令</h2><ul>
+<li><p>端口</p>
+<ul>
+<li><code>netstat -nltp</code></li>
+</ul>
+</li>
+<li><p>防火墙</p>
+<ul>
+<li><p>使用内置防火墙</p>
+<pre class="line-numbers language-shell"><code class="language-shell">#临时操作
+systemctl status firewalld
+systemctl start firewalld
+systemctl stop firewalld
+#永久操作，开机启动
+systemctl enable firewalld
+systemctl disable firewalld
+#打开关闭端口
+firewall-cmd --zone=public --add-port=8080/tcp --permanent
+firewall-cmd --zone=public --remove-port=8080/tcp --permanent
+#配置立即生效
+firewall-cmd --reload
+#查看打开的端口
+firewall-cmd --zone=public --list-ports
+#防火墙状态
+firewall-cmd --state
+#centos7默认没有 netstat 命令，需要安装 net-tools 工具，yum install -y net-tools
+netstat -nltp
+
+#区域相关
+firewall-cmd --list-all-zones #查看所有区域信息
+firewall-cmd --get-active-zones #查看活动区域信息
+firewall-cmd --set-default-zone=public #设置public为默认区域
+firewall-cmd --get-default-zone #查看默认区域信息
+firewall-cmd --zone=public --add-interface=eth0 #将接口eth0加入区域public
+#接口相关
+firewall-cmd --zone=public --remove-interface=eth0 #从区域public中删除接口eth0
+firewall-cmd --zone=default --change-interface=eth0 #修改接口eth0所属区域为default
+firewall-cmd --get-zone-of-interface=eth0 #查看接口eth0所属区域
+
+#路由转发
+# 将80端口的流量转发至8000
+firewall-cmd --add-forward-port=port=80:proto=tcp:toport=8000   
+# 将80端口的流量转发至10.10.0.1
+firewall-cmd --add-forward-port=proto=80:proto=tcp:toaddr=10.10.0.1 
+# 将80端口的流量转发至10.10.0.1:8000
+firewall-cmd --add-forward-port=proto=80:proto=tcp:toaddr=10.10.0.1:toport=8000
+
+# 检查是否允许伪装IP
+firewall-cmd --query-masquerade  
+# 允许防火墙伪装IP
+firewall-cmd --add-masquerade    
+# 禁止防火墙伪装IP
+firewall-cmd --remove-masquerade
+
+#rich rule
+firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.0.4/24" service name="http" accept'
+#删除--remove-rich-rule<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>使用iptables</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#检查状态</span>
+<span class="token function">service</span> iptables status
+<span class="token comment" spellcheck="true">#安装</span>
+yum <span class="token function">install</span> -y iptables
+<span class="token comment" spellcheck="true">#查看端口</span>
+/sbin/iptables -L -n
+<span class="token comment" spellcheck="true">#生成/etc/sysconfig/iptables</span>
+iptables -P INPUT ACCESS
+<span class="token comment" spellcheck="true">#开放某个端口</span>
+/sbin/iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
+<span class="token comment" spellcheck="true">#保存</span>
+iptable-save <span class="token operator">></span> /etc/sysconfig/iptables
+<span class="token comment" spellcheck="true">#检查</span>
+<span class="token function">netstat</span> -an <span class="token operator">|</span><span class="token function">grep</span> 8080<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><code>firewall</code>和<code>iptable</code>冲突，需要禁用一个</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#停止iptables服务</span>
+systemctl stop iptables
+<span class="token comment" spellcheck="true">#禁用iptables服务</span>
+systemctl mask iptables<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><p>区别</p>
+<p><code>firewall</code>是centos7开始的新命令，底层还是<code>iptable</code></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">sulin</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2020/10/16/linux-shell/">http://example.com/2020/10/16/linux-shell/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">sulin</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
+                                </a>
+                            
+                                <a href="/tags/shell/">
+                                    <span class="chip bg-color">shell</span>
+                                </a>
+                            
+                                <a href="/tags/firewall/">
+                                    <span class="chip bg-color">firewall</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%98%B2%E7%81%AB%E5%A2%99/">
+                                    <span class="chip bg-color">防火墙</span>
+                                </a>
+                            
+                                <a href="/tags/iptable/">
+                                    <span class="chip bg-color">iptable</span>
+                                </a>
+                            
+                                <a href="/tags/profile/">
+                                    <span class="chip bg-color">profile</span>
+                                </a>
+                            
+                                <a href="/tags/wget/">
+                                    <span class="chip bg-color">wget</span>
+                                </a>
+                            
+                                <a href="/tags/curl/">
+                                    <span class="chip bg-color">curl</span>
+                                </a>
+                            
+                                <a href="/tags/yum/">
+                                    <span class="chip bg-color">yum</span>
+                                </a>
+                            
+                                <a href="/tags/rpm/">
+                                    <span class="chip bg-color">rpm</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%AE%A1%E9%81%93/">
+                                    <span class="chip bg-color">管道</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%87%8D%E5%AE%9A%E5%90%91/">
+                                    <span class="chip bg-color">重定向</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/10/16/linux-shell/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="linux的正确打开姿势">
+                        
+                        <span class="card-title">linux的正确打开姿势</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            熟练操作linux是可以大大提升开发人员工作效率，本文将介绍linux常用打开姿势。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/linux/" class="post-category">
+                                    linux
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
+                    </a>
+                    
+                    <a href="/tags/shell/">
+                        <span class="chip bg-color">shell</span>
+                    </a>
+                    
+                    <a href="/tags/firewall/">
+                        <span class="chip bg-color">firewall</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%98%B2%E7%81%AB%E5%A2%99/">
+                        <span class="chip bg-color">防火墙</span>
+                    </a>
+                    
+                    <a href="/tags/iptable/">
+                        <span class="chip bg-color">iptable</span>
+                    </a>
+                    
+                    <a href="/tags/profile/">
+                        <span class="chip bg-color">profile</span>
+                    </a>
+                    
+                    <a href="/tags/wget/">
+                        <span class="chip bg-color">wget</span>
+                    </a>
+                    
+                    <a href="/tags/curl/">
+                        <span class="chip bg-color">curl</span>
+                    </a>
+                    
+                    <a href="/tags/yum/">
+                        <span class="chip bg-color">yum</span>
+                    </a>
+                    
+                    <a href="/tags/rpm/">
+                        <span class="chip bg-color">rpm</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AE%A1%E9%81%93/">
+                        <span class="chip bg-color">管道</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%87%8D%E5%AE%9A%E5%90%91/">
+                        <span class="chip bg-color">重定向</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/10/15/java-lian-jie-shu-ju-ku-1/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="java连接数据库1">
+                        
+                        <span class="card-title">java连接数据库1</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            刚接触java或很长时间不使用java，遗忘了怎样连接数据库，本文将介绍一系列java连接数据库的姿势。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/java%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%90%84%E7%A7%8D%E5%A7%BF%E5%8A%BF/" class="post-category">
+                                    java连接数据库的各种姿势
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                    <a href="/tags/oracle/">
+                        <span class="chip bg-color">oracle</span>
+                    </a>
+                    
+                    <a href="/tags/mysql/">
+                        <span class="chip bg-color">mysql</span>
+                    </a>
+                    
+                    <a href="/tags/docker/">
+                        <span class="chip bg-color">docker</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/">
+                        <span class="chip bg-color">数据库连接</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">sulin</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/sulinyy" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:baibao88@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=568386689" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 568386689" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
