@@ -498,15 +498,50 @@
 </li>
 </ul>
 <h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="终端快捷键"><a href="#终端快捷键" class="headerlink" title="终端快捷键"></a>终端快捷键</h2><ul>
-<li>移动至行首行尾 <code>ctrl+a, ctrl+e</code></li>
-<li>中断与退出终端<code>ctrl+c, ctrl+d</code></li>
-<li>后台运行，如果忘了输入<code>&amp;</code>可以使用<code>ctrl+z</code></li>
-<li>清空<code>ctrl+c</code></li>
-<li>丢弃命令，丢弃光标前后的命令 <code>ctrl+u,ctrl+k</code></li>
-<li>丢弃光标前的单词 <code>ctrl+w</code></li>
-<li>丢弃的内容需要复制 <code>ctrl+y</code></li>
-<li>显示上/下一条命令<code>ctrl+p, ctrl+n</code></li>
-<li>搜索历史命令<code>ctrl+r</code></li>
+<li><p>移动至行首行尾 <code>ctrl+a, ctrl+e</code></p>
+</li>
+<li><p>中断与退出终端<code>ctrl+c, ctrl+d</code></p>
+</li>
+<li><p>后台运行，如果忘了输入<code>&amp;</code>可以使用<code>ctrl+z</code>，使用<code>fg</code>恢复</p>
+</li>
+<li><p>清空<code>ctrl+c</code></p>
+</li>
+<li><p>丢弃命令，丢弃光标前后的命令 <code>ctrl+u,ctrl+k</code></p>
+</li>
+<li><p>丢弃光标前的单词 <code>ctrl+w</code></p>
+</li>
+<li><p>丢弃的内容需要复制 <code>ctrl+y</code></p>
+</li>
+<li><p>显示上/下一条命令<code>ctrl+p, ctrl+n</code></p>
+</li>
+<li><p>搜索历史命令<code>ctrl+r</code></p>
+</li>
+<li><p>光标前/后移动一个字符<code>ctrl+b, ctrl+f</code></p>
+</li>
+<li><p>删除光标前一个字符<code>ctrl+h</code>等同于backspace</p>
+</li>
+<li><p>交换光标及光标前一个字符<code>ctrl+t</code></p>
+</li>
+<li><p>删除光标所在字母<code>ctrl+d</code></p>
+</li>
+<li><p>相当于回车 <code>ctrl+m, ctrl+o</code></p>
+</li>
+<li><p>冻结/解冻当前shell输入<code>ctrl+s, ctrl+q</code></p>
+</li>
+<li><p>光标向左/右移动一个单词<code>esc+b, esc+f</code></p>
+</li>
+<li><p>删除光标后的一个单词<code>esc+d</code></p>
+</li>
+<li><p>下一个单词首字母大写<code>esc+c</code></p>
+</li>
+<li><p>下一个单词所有字母大写<code>esc+u</code></p>
+</li>
+<li><p>下一个单词所有字母小写<code>esc+i</code></p>
+</li>
+<li><p><code>ls test.txt</code>之后<code>vi !$</code>相当于<code>vi test.txt</code>，<code>!$</code>等于上一个命令的参数</p>
+</li>
+<li><p><code>!ls</code>运行最后一次以ls开头的命令 </p>
+</li>
 </ul>
 <h2 id="sh解释器"><a href="#sh解释器" class="headerlink" title="sh解释器"></a>sh解释器</h2><ul>
 <li>查看系统支持哪些shell</li>
