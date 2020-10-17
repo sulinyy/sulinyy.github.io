@@ -657,72 +657,57 @@ yum makecache<span aria-hidden="true" class="line-numbers-rows"><span></span><sp
 <h3 id="介绍了wget，怎能不介绍curl"><a href="#介绍了wget，怎能不介绍curl" class="headerlink" title="介绍了wget，怎能不介绍curl"></a>介绍了wget，怎能不介绍curl</h3><ul>
 <li><p>常用参数</p>
 <ul>
-<li><p><code>-o</code>指定文件名</p>
-<pre class="line-numbers language-bash"><code class="language-bash">curl -o <span class="token comment" spellcheck="true">#1_#2.tar.gz http://www.xxxx.com/{a1,a2}/xo[1-5].tar.gz</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<li><code>-o</code>指定文件名</li>
+</ul>
 </li>
-<li><p><code>-O</code>–remote-name   Write output to a file named as the remote file</p>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash">curl -o <span class="token comment" spellcheck="true">#1_#2.tar.gz http://www.xxxx.com/{a1,a2}/xo[1-5].tar.gz</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li><code>-O</code>–remote-name   Write output to a file named as the remote file</li>
+</ul>
 <pre class="line-numbers language-bash"><code class="language-bash">curl -O http://www.xxxx.com/<span class="token punctuation">{</span>a1,a2<span class="token punctuation">}</span>/xo<span class="token punctuation">[</span>1-5<span class="token punctuation">]</span>.tar.gz
 
 <span class="token comment" spellcheck="true">#补充一个grep的转义，字符-需要使用\进行转义，并且查询内容要用单引号框起来才能查询出结果，如下所示：</span>
 curl --help<span class="token operator">|</span><span class="token function">grep</span> <span class="token string">'\-O'</span>
 -O, --remote-name   Write output to a <span class="token function">file</span> named as the remote <span class="token function">file</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p><code>-r</code> 分块下载，–range RANGE  Retrieve only the bytes within a range</p>
+<ul>
+<li><code>-r</code> 分块下载，–range RANGE  Retrieve only the bytes within a range</li>
+</ul>
 <pre class="line-numbers language-bash"><code class="language-bash">curl -r 0-10000 -o file_part1.tar.gz http://www.xxx.com/xxx.tar.gz
 curl -r 10000-20000 -o file_part2.tar.gz http://www.xxx.com/xxx.tar.gz
 curl -r 20000- -o file_part3.tar.gz http://www.xxx.com/xxx.tar.gz
 <span class="token function">cat</span> file_part* <span class="token operator">></span> file.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p><code>-T</code>–upload-file FILE Transfer FILE to destination</p>
-</li>
-<li><p><code>-F</code> –form &lt;name=content&gt; 模拟http表单提交数据</p>
-</li>
-<li><p><code>-c</code>–cookie-jar-file 操作结束后把cookie写入到这个文件中</p>
-</li>
-<li><p><code>-D</code> 保存头信息</p>
+<ul>
+<li><code>-T</code>–upload-file FILE Transfer FILE to destination</li>
+<li><code>-F</code> –form &lt;name=content&gt; 模拟http表单提交数据</li>
+<li><code>-c</code>–cookie-jar-file 操作结束后把cookie写入到这个文件中</li>
+<li><code>-D</code> 保存头信息</li>
+</ul>
 <pre class="line-numbers language-bash"><code class="language-bash">curl -c ./ck_c.txt -D ./ck_d.txt -F name<span class="token operator">=</span>xxx -F pass<span class="token operator">=</span>yyy http://www.xoxo.com/login
 curl -T pic<span class="token operator">=</span>@localfile http://www.xoxo.com/upload<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
-</ul>
-</li>
-</ul>
 <ul>
-<li><p><code>-A</code>随意指定当前浏览器信息</p>
-</li>
-<li><p><code>-b</code>使用cookie文件</p>
-</li>
-<li><p><code>-C</code>断点续传</p>
-</li>
-<li><p><code>-d</code>使用POST</p>
+<li><code>-A</code>随意指定当前浏览器信息</li>
+<li><code>-b</code>使用cookie文件</li>
+<li><code>-C</code>断点续传</li>
+<li><code>-d</code>使用POST</li>
+</ul>
 <pre class="line-numbers language-bash"><code class="language-bash">curl -d <span class="token string">"name=xxx&amp;pass=yyy"</span> http://www.xoxo.com/login<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p><code>-v</code> verbose，打印更多信息</p>
-</li>
-<li><p><code>-m</code> –max-time <seconds> 指定处理的最大时长</seconds></p>
-</li>
-</ul>
 <ul>
-<li><p><code>-H</code>指定请求头</p>
-</li>
-<li><p><code>-H</code>–header </p><header> 指定请求头参数<p></p>
-</header></li>
-<li><p><code>-s</code>–slient 减少输出的信息</p>
-</li>
-<li><p><code>--connect-timeout</code>指定尝试连接的最大时长</p>
-</li>
-<li><p><code>-x/--proxy</code>指定代理服务器地址和端口，端口默认为1080</p>
-</li>
-<li><p><code>--retry</code>  指定重试次数</p>
-</li>
-<li><p><code>-e/--referer</code> 指定引用地址</p>
-</li>
-<li><p><code>-I/--head</code> 仅返回头部信息，使用HEAD请求</p>
-</li>
-<li><p><code>-u/--user</code>设置服务器的用户和密码</p>
-</li>
+<li><code>-v</code> verbose，打印更多信息</li>
+<li><code>-m</code> –max-time <seconds> 指定处理的最大时长</seconds></li>
+<li><code>-H</code>指定请求头</li>
+<li><code>-H</code>–header <header> 指定请求头参数</header></li>
+<li><code>-s</code>–slient 减少输出的信息</li>
+<li><code>--connect-timeout</code>指定尝试连接的最大时长</li>
+<li><code>-x/--proxy</code>指定代理服务器地址和端口，端口默认为1080</li>
+<li><code>--retry</code>  指定重试次数</li>
+<li><code>-e/--referer</code> 指定引用地址</li>
+<li><code>-I/--head</code> 仅返回头部信息，使用HEAD请求</li>
+<li><code>-u/--user</code>设置服务器的用户和密码</li>
 </ul>
 <h3 id="介绍分段下载时，下载了文件file-tar-gz，下面介绍打包和压缩"><a href="#介绍分段下载时，下载了文件file-tar-gz，下面介绍打包和压缩" class="headerlink" title="介绍分段下载时，下载了文件file.tar.gz，下面介绍打包和压缩"></a>介绍分段下载时，下载了文件file.tar.gz，下面介绍打包和压缩</h3><ul>
-<li><p>命令如下</p>
+<li>命令如下</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -777,10 +762,9 @@ curl -T pic<span class="token operator">=</span>@localfile http://www.xoxo.com/u
 <td></td>
 </tr>
 </tbody></table>
-</li>
-</ul>
 <h2 id="打包完成后，不知道文件放哪里了，需要使用find命令"><a href="#打包完成后，不知道文件放哪里了，需要使用find命令" class="headerlink" title="打包完成后，不知道文件放哪里了，需要使用find命令"></a>打包完成后，不知道文件放哪里了，需要使用find命令</h2><ul>
-<li><p>常用参数</p>
+<li>常用参数</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -845,41 +829,43 @@ curl -T pic<span class="token operator">=</span>@localfile http://www.xoxo.com/u
 <td></td>
 </tr>
 </tbody></table>
-</li>
+<ul>
 <li><p><code>-exec -ok</code> 参数</p>
 <ul>
 <li>查找出来并执行命令</li>
 </ul>
 </li>
 <li><p>示例</p>
-<pre class="line-numbers language-hash"><code class="language-hash">[sulin@localhost tmp]$ echo "1" > 1.txt
-[sulin@localhost tmp]$ echo "2" > 2.txt
-[sulin@localhost tmp]$ echo "3" > 3.txt
-[sulin@localhost tmp]$ echo "4" > 4.txt
-[sulin@localhost tmp]$ echo "10" > 10.txt
-#查找文件
-[sulin@localhost tmp]$ find -name "1*.txt"
+</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token keyword">echo</span> <span class="token string">"1"</span> <span class="token operator">></span> 1.txt
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token keyword">echo</span> <span class="token string">"2"</span> <span class="token operator">></span> 2.txt
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token keyword">echo</span> <span class="token string">"3"</span> <span class="token operator">></span> 3.txt
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token keyword">echo</span> <span class="token string">"4"</span> <span class="token operator">></span> 4.txt
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token keyword">echo</span> <span class="token string">"10"</span> <span class="token operator">></span> 10.txt
+<span class="token comment" spellcheck="true">#查找文件</span>
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token function">find</span> -name <span class="token string">"1*.txt"</span>
 ./1.txt
 ./10.txt
-#查找文件并执行ls -la命令
-[sulin@localhost tmp]$ find -name "1*.txt" -exec ls -la {} \;
+<span class="token comment" spellcheck="true">#查找文件并执行ls -la命令</span>
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token function">find</span> -name <span class="token string">"1*.txt"</span> -exec <span class="token function">ls</span> -la <span class="token punctuation">{</span><span class="token punctuation">}</span> \<span class="token punctuation">;</span>
 -rw-rw-r--. 1 sulin sulin 2 10月 17 00:44 ./1.txt
 -rw-rw-r--. 1 sulin sulin 3 10月 17 00:45 ./10.txt
-#查找文件并执行rm操作
-[sulin@localhost tmp]$ find -name "1*.txt" -exec rm {} \;
-[sulin@localhost tmp]$ ls
+<span class="token comment" spellcheck="true">#查找文件并执行rm操作</span>
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token function">find</span> -name <span class="token string">"1*.txt"</span> -exec <span class="token function">rm</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> \<span class="token punctuation">;</span>
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token function">ls</span>
 2.txt  3.txt  4.txt
-#查找文件并执行rm操作，并提示确认
-[sulin@localhost tmp]$ find -name "2*.txt" -ok rm {} \;
-< rm ... ./2.txt > ? y
+<span class="token comment" spellcheck="true">#查找文件并执行rm操作，并提示确认</span>
+<span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token function">find</span> -name <span class="token string">"2*.txt"</span> -ok <span class="token function">rm</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> \<span class="token punctuation">;</span>
+<span class="token operator">&lt;</span> <span class="token function">rm</span> <span class="token punctuation">..</span>. ./2.txt <span class="token operator">></span> ? y
 
-cd /etc
-find . -maxdepth 1 -cnewer yum.conf -a -not -cnewer purple -anewer ghostscript -a -type d -a -empty
-find -size +640
-find -size -640
+<span class="token function">cd</span> /etc
+<span class="token function">find</span> <span class="token keyword">.</span> -maxdepth 1 -cnewer yum.conf -a -not -cnewer purple -anewer ghostscript -a -type d -a -empty
+<span class="token function">find</span> -size +640
+<span class="token function">find</span> -size -640
 
-#查找文件大小小于1
-[sulin@localhost etc]$ find . -maxdepth 1 -size -1
+<span class="token comment" spellcheck="true">#查找文件大小小于1</span>
+<span class="token punctuation">[</span>sulin@localhost etc<span class="token punctuation">]</span>$ <span class="token function">find</span> <span class="token keyword">.</span> -maxdepth 1 -size -1
 ./crypttab
 ./environment
 ./exports
@@ -889,28 +875,28 @@ find -size -640
 ./subuid
 ./cron.deny
 ./wvdial.conf
-#文件大小大于100
-[sulin@localhost etc]$ find . -maxdepth 1 -size +100
+<span class="token comment" spellcheck="true">#文件大小大于100</span>
+<span class="token punctuation">[</span>sulin@localhost etc<span class="token punctuation">]</span>$ <span class="token function">find</span> <span class="token keyword">.</span> -maxdepth 1 -size +100
 ./services
 ./ld.so.cache
-#文件大小小于1或者大于100的总行数
-[sulin@localhost etc]$ find . -maxdepth 1 -size -1 -o -size +100|wc -l
+<span class="token comment" spellcheck="true">#文件大小小于1或者大于100的总行数</span>
+<span class="token punctuation">[</span>sulin@localhost etc<span class="token punctuation">]</span>$ <span class="token function">find</span> <span class="token keyword">.</span> -maxdepth 1 -size -1 -o -size +100<span class="token operator">|</span><span class="token function">wc</span> -l
 11<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
 <h2 id="vi介绍"><a href="#vi介绍" class="headerlink" title="vi介绍"></a>vi介绍</h2><ul>
 <li><p>保存和退出：<code>:w</code>,<code>:wq</code>,<code>:x</code>,<code>:q</code>,<code>:q!</code></p>
 </li>
 <li><p>编辑：</p>
+</li>
+<li><p>常用的：<code>i</code>,<code>a</code>,<code>x</code>,<code>r</code></p>
 <ul>
-<li>常用的：<code>i</code>,<code>a</code>,<code>x</code>,<code>r</code><ul>
 <li>大些<code>I</code>,<code>A</code>分别代码行首行末追加</li>
 </ul>
 </li>
-<li>较常用的增加空行：<code>o</code>,<code>O</code></li>
-<li>撤销与redu：<code>u</code>，<code>ctrl+r</code></li>
-<li>删除行：<code>dd</code></li>
-</ul>
+<li><p>较常用的增加空行：<code>o</code>,<code>O</code></p>
+</li>
+<li><p>撤销与redu：<code>u</code>，<code>ctrl+r</code></p>
+</li>
+<li><p>删除行：<code>dd</code></p>
 </li>
 <li><p>光标</p>
 <ul>
@@ -986,7 +972,8 @@ find -size -640
 </li>
 </ul>
 <h2 id="rmp包管理"><a href="#rmp包管理" class="headerlink" title="rmp包管理"></a>rmp包管理</h2><ul>
-<li><p>示例</p>
+<li>示例</li>
+</ul>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#安装</span>
 rpm -ivh xxx.rpm
 <span class="token comment" spellcheck="true">#更新</span>
@@ -997,7 +984,7 @@ rmp -e xxx.rmp
 rmp -qa
 <span class="token comment" spellcheck="true">#查询xxx</span>
 rmp -qa<span class="token operator">|</span> <span class="token function">grep</span> -i xxx<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
+<ul>
 <li><p>参数说明</p>
 <ul>
 <li><code>-i</code> 安装 install</li>
@@ -1014,44 +1001,36 @@ rmp -qa<span class="token operator">|</span> <span class="token function">grep</
 <li><p>rpm查询指定软件包时使用了管道命令，现在介绍如何使用管道命令</p>
 </li>
 <li><p>用法：</p>
+</li>
+</ul>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#将cmd1的输出作为cmd2的输入，cmd2的输出作为cmd3的输入</span>
 cmd1 <span class="token operator">|</span> cmd2 <span class="token operator">|</span> <span class="token punctuation">..</span>. <span class="token operator">|</span> cmdn<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
+<ul>
 <li><p>常在管道中使用的命令</p>
 <ul>
-<li><p><code>grep</code></p>
+<li><code>grep</code></li>
+<li><code>sort</code> 默认以文本排序，如果要按数字排序，加上参数<code>-n</code></li>
+<li><code>paste</code></li>
+<li><code>wc</code></li>
+<li><code>tee</code></li>
+<li><code>xargs</code></li>
+<li><code>expand</code></li>
+<li><code>join</code></li>
+<li><code>tr</code></li>
+<li><code>col</code></li>
+<li><code>cut</code></li>
+</ul>
 </li>
-<li><p><code>sort</code> 默认以文本排序，如果要按数字排序，加上参数<code>-n</code></p>
-</li>
-<li><p><code>paste</code></p>
-</li>
-<li><p><code>wc</code></p>
-</li>
-<li><p><code>tee</code></p>
-</li>
-<li><p><code>xargs</code></p>
-</li>
-<li><p><code>expand</code></p>
-</li>
-<li><p><code>join</code></p>
-</li>
-<li><p><code>tr</code></p>
-</li>
-<li><p><code>col</code></p>
-</li>
-<li><p><code>cut</code></p>
+</ul>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#按空格分割取第一列</span>
 last<span class="token operator">|</span><span class="token function">cut</span> -d <span class="token string">' '</span> -f 1
 <span class="token comment" spellcheck="true">#按:分割取第一和第六列</span>
 <span class="token function">cat</span> /etc/passwd<span class="token operator">|</span> <span class="token function">cut</span> -d <span class="token string">':'</span> -f 1,6
 <span class="token comment" spellcheck="true">#取第一到第六个字符</span>
 <span class="token function">cat</span> /etc/passwd<span class="token operator">|</span> <span class="token function">cut</span> -c 1-6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-</li>
-</ul>
 <ul>
-<li><p>示例</p>
+<li>示例</li>
+</ul>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#先通过grep --help查找出grep命令的帮助，然后匹配`-c`的结果，结果有9行</span>
 <span class="token punctuation">[</span>sulin@localhost java<span class="token punctuation">]</span>$ <span class="token function">grep</span> --help<span class="token operator">|</span><span class="token function">grep</span> -n <span class="token string">'\-c'</span>
 13:  -i, --ignore-case         忽略大小写
@@ -1101,9 +1080,10 @@ test1 1 2
 test2 1 2
 <span class="token punctuation">[</span>sulin@localhost tmp<span class="token punctuation">]</span>$ <span class="token function">paste</span> 1.txt 2.txt 
 test1 1    test1 2
-test2 1    test2 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
+test2 1    test2 2
+
+<span class="token comment" spellcheck="true">#查找hexo的进程，排除包含grep的进程，打印第二个字段，kill掉它</span>
+<span class="token function">ps</span> -ef <span class="token operator">|</span> <span class="token function">grep</span> hexo <span class="token operator">|</span> <span class="token function">grep</span> -v <span class="token function">grep</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print <span class="token variable">$2</span>}'</span> <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token function">kill</span> -9<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="源码编译和安装"><a href="#源码编译和安装" class="headerlink" title="源码编译和安装"></a>源码编译和安装</h2><ul>
 <li>Linux上的软件都经过GPL授权，因此几乎都有源码，源码需要进行编译生成二进制文件才能执行</li>
 <li>一般情况下步骤如下：<ul>
@@ -1125,18 +1105,20 @@ test2 1    test2 2<span aria-hidden="true" class="line-numbers-rows"><span></spa
 <li><p>错误输出 <code>stderr</code> 文件描述符 <code>2</code></p>
 </li>
 <li><p><code>0 1 2</code>是如何定义的</p>
+</li>
+</ul>
+</li>
+</ul>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token punctuation">[</span>sulin@localhost ~<span class="token punctuation">]</span>$ ll /dev/std*
 lrwxrwxrwx. 1 root root 15 10月 17 00:22 /dev/stderr -<span class="token operator">></span> /proc/self/fd/2
 lrwxrwxrwx. 1 root root 15 10月 17 00:22 /dev/stdin -<span class="token operator">></span> /proc/self/fd/0
 lrwxrwxrwx. 1 root root 15 10月 17 00:22 /dev/stdout -<span class="token operator">></span> /proc/self/fd/1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-</li>
-</ul>
 <ul>
 <li><p>示例</p>
 <ul>
 <li>输出重定向</li>
+</ul>
+</li>
 </ul>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#标准输出重定向到文件，覆盖文件</span>
 <span class="token function">ls</span> -l <span class="token operator">></span> log.txt
@@ -1162,8 +1144,6 @@ commond <span class="token operator">&lt;</span> file1 <span class="token operat
 <ul>
 <li><code>/dev/null</code></li>
 </ul>
-</li>
-</ul>
 <h2 id="网络命令"><a href="#网络命令" class="headerlink" title="网络命令"></a>网络命令</h2><ul>
 <li><p>端口</p>
 <ul>
@@ -1172,57 +1152,61 @@ commond <span class="token operator">&lt;</span> file1 <span class="token operat
 </li>
 <li><p>防火墙</p>
 <ul>
-<li><p>使用内置防火墙</p>
-<pre class="line-numbers language-shell"><code class="language-shell">#临时操作
+<li>使用内置防火墙</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#临时操作</span>
 systemctl status firewalld
 systemctl start firewalld
 systemctl stop firewalld
-#永久操作，开机启动
-systemctl enable firewalld
+<span class="token comment" spellcheck="true">#永久操作，开机启动</span>
+systemctl <span class="token function">enable</span> firewalld
 systemctl disable firewalld
-#打开关闭端口
-firewall-cmd --zone=public --add-port=8080/tcp --permanent
-firewall-cmd --zone=public --remove-port=8080/tcp --permanent
-#配置立即生效
+<span class="token comment" spellcheck="true">#打开关闭端口</span>
+firewall-cmd --zone<span class="token operator">=</span>public --add-port<span class="token operator">=</span>8080/tcp --permanent
+firewall-cmd --zone<span class="token operator">=</span>public --remove-port<span class="token operator">=</span>8080/tcp --permanent
+<span class="token comment" spellcheck="true">#配置立即生效</span>
 firewall-cmd --reload
-#查看打开的端口
-firewall-cmd --zone=public --list-ports
-#防火墙状态
+<span class="token comment" spellcheck="true">#查看打开的端口</span>
+firewall-cmd --zone<span class="token operator">=</span>public --list-ports
+<span class="token comment" spellcheck="true">#防火墙状态</span>
 firewall-cmd --state
-#centos7默认没有 netstat 命令，需要安装 net-tools 工具，yum install -y net-tools
-netstat -nltp
+<span class="token comment" spellcheck="true">#centos7默认没有 netstat 命令，需要安装 net-tools 工具，yum install -y net-tools</span>
+<span class="token function">netstat</span> -nltp
 
-#区域相关
-firewall-cmd --list-all-zones #查看所有区域信息
-firewall-cmd --get-active-zones #查看活动区域信息
-firewall-cmd --set-default-zone=public #设置public为默认区域
-firewall-cmd --get-default-zone #查看默认区域信息
-firewall-cmd --zone=public --add-interface=eth0 #将接口eth0加入区域public
-#接口相关
-firewall-cmd --zone=public --remove-interface=eth0 #从区域public中删除接口eth0
-firewall-cmd --zone=default --change-interface=eth0 #修改接口eth0所属区域为default
-firewall-cmd --get-zone-of-interface=eth0 #查看接口eth0所属区域
+<span class="token comment" spellcheck="true">#区域相关</span>
+firewall-cmd --list-all-zones <span class="token comment" spellcheck="true">#查看所有区域信息</span>
+firewall-cmd --get-active-zones <span class="token comment" spellcheck="true">#查看活动区域信息</span>
+firewall-cmd --set-default-zone<span class="token operator">=</span>public <span class="token comment" spellcheck="true">#设置public为默认区域</span>
+firewall-cmd --get-default-zone <span class="token comment" spellcheck="true">#查看默认区域信息</span>
+firewall-cmd --zone<span class="token operator">=</span>public --add-interface<span class="token operator">=</span>eth0 <span class="token comment" spellcheck="true">#将接口eth0加入区域public</span>
+<span class="token comment" spellcheck="true">#接口相关</span>
+firewall-cmd --zone<span class="token operator">=</span>public --remove-interface<span class="token operator">=</span>eth0 <span class="token comment" spellcheck="true">#从区域public中删除接口eth0</span>
+firewall-cmd --zone<span class="token operator">=</span>default --change-interface<span class="token operator">=</span>eth0 <span class="token comment" spellcheck="true">#修改接口eth0所属区域为default</span>
+firewall-cmd --get-zone-of-interface<span class="token operator">=</span>eth0 <span class="token comment" spellcheck="true">#查看接口eth0所属区域</span>
 
-#路由转发
-# 将80端口的流量转发至8000
-firewall-cmd --add-forward-port=port=80:proto=tcp:toport=8000   
-# 将80端口的流量转发至10.10.0.1
-firewall-cmd --add-forward-port=proto=80:proto=tcp:toaddr=10.10.0.1 
-# 将80端口的流量转发至10.10.0.1:8000
-firewall-cmd --add-forward-port=proto=80:proto=tcp:toaddr=10.10.0.1:toport=8000
+<span class="token comment" spellcheck="true">#路由转发</span>
+<span class="token comment" spellcheck="true"># 将80端口的流量转发至8000</span>
+firewall-cmd --add-forward-port<span class="token operator">=</span>port<span class="token operator">=</span>80:proto<span class="token operator">=</span>tcp:toport<span class="token operator">=</span>8000   
+<span class="token comment" spellcheck="true"># 将80端口的流量转发至10.10.0.1</span>
+firewall-cmd --add-forward-port<span class="token operator">=</span>proto<span class="token operator">=</span>80:proto<span class="token operator">=</span>tcp:toaddr<span class="token operator">=</span>10.10.0.1 
+<span class="token comment" spellcheck="true"># 将80端口的流量转发至10.10.0.1:8000</span>
+firewall-cmd --add-forward-port<span class="token operator">=</span>proto<span class="token operator">=</span>80:proto<span class="token operator">=</span>tcp:toaddr<span class="token operator">=</span>10.10.0.1:toport<span class="token operator">=</span>8000
 
-# 检查是否允许伪装IP
+<span class="token comment" spellcheck="true"># 检查是否允许伪装IP</span>
 firewall-cmd --query-masquerade  
-# 允许防火墙伪装IP
+<span class="token comment" spellcheck="true"># 允许防火墙伪装IP</span>
 firewall-cmd --add-masquerade    
-# 禁止防火墙伪装IP
+<span class="token comment" spellcheck="true"># 禁止防火墙伪装IP</span>
 firewall-cmd --remove-masquerade
 
-#rich rule
-firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.0.4/24" service name="http" accept'
-#删除--remove-rich-rule<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>使用iptables</p>
+<span class="token comment" spellcheck="true">#rich rule</span>
+firewall-cmd --permanent --zone<span class="token operator">=</span>public --add-rich-rule<span class="token operator">=</span><span class="token string">'rule family="ipv4" source address="192.168.0.4/24" service name="http" accept'</span>
+<span class="token comment" spellcheck="true">#删除--remove-rich-rule</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>使用iptables</li>
+</ul>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#检查状态</span>
 <span class="token function">service</span> iptables status
 <span class="token comment" spellcheck="true">#安装</span>
@@ -1247,10 +1231,6 @@ systemctl mask iptables<span aria-hidden="true" class="line-numbers-rows"><span>
 <ul>
 <li><p>区别</p>
 <p><code>firewall</code>是centos7开始的新命令，底层还是<code>iptable</code></p>
-</li>
-</ul>
-</li>
-</ul>
 </li>
 </ul>
 
